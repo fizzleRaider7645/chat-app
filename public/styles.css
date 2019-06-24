@@ -5,6 +5,12 @@ body{
     background: #555;
 }
 
+#big-header {
+    color: yellow;
+    height: 75px;
+    text-align: center;
+}
+
 h2{
     font-size: 18px;
     padding: 10px 20px;
@@ -58,7 +64,6 @@ input{
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #eee;
-    /* font-family: Nunito; */
     font-family: 'Press Start 2P';
     font-size: 16px;
 }
