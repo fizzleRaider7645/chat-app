@@ -8,7 +8,7 @@ let server = app.listen(4000, function() {
     console.log('I\'m listening...')
 })
 
-app.use(express.static('./src/server/public'))
+app.use(express.static('public'))
 
 let io = socket(server);
 

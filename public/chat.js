@@ -4,7 +4,7 @@ let socket = io.connect('http://localhost:4000');
 
 // Query DOM
 let message = document.getElementById('message'),
-      handle = document.getElementById('handle'),
+      name = document.getElementById('name'),
       btn = document.getElementById('send'),
       output = document.getElementById('output');
 
@@ -12,12 +12,12 @@ let message = document.getElementById('message'),
 btn.addEventListener('click', function(){
   socket.emit('chat', {
       message: message.value,
-      handle: handle.value
+      name: name.value
   });
   message.value = "";
 });
 
 // Listen for events
 socket.on('chat', function(data){
-    output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>';
+    output.innerHTML += '<p><strong>' + data.name + ': </strong>' + data.message + '</p>';
 });
