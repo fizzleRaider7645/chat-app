@@ -1,16 +1,14 @@
 /* Server Side */
 
-let express = require('express');
-let socket = require('socket.io')
-let app = express();
+const express = require('express');
+const socket = require('socket.io')
+const app = express();
 
-let server = app.listen(process.env.PORT || 4000, function() {
-    console.log('I\'m listening...')
-})
+const server = app.listen(process.env.PORT)
 
 app.use(express.static('public'))
 
-let io = socket(server);
+const io = socket(server);
 
 io.on('connection', function(socket) {
     console.log('connection made', socket.id)
